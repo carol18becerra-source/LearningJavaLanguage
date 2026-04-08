@@ -6,5 +6,8 @@ public class Persona {
 	/*A continucion las variables mienbros de la clase, que se le llama:
 	 * propiadades, campos y atributos  */
 	
+	String nombre;
+	String primerApellido;
+	String segundoApellido;
 	
 }
