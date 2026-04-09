@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class App {
+	
+	public String texto = "Vivo en el plano de las instancias";
+	
 	public static void main(String[] args) {
 
 		/*creacion o instanciacion de objetos utilizando el patron builder de lombok
@@ -33,6 +36,13 @@ public class App {
 				.build();
 		
 		System.out.println(persona2);
+		
+		System.out.println("El pais de todas la personas es:" + Persona.PAIS);
+		
+		// Mostar el valor de la varible
+		
+		System.out.println(new App().texto);
+		
 	
 	}
 }
