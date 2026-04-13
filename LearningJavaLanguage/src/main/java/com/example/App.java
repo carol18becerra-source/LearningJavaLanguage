@@ -67,63 +67,54 @@ public class App {
 		/*creando un array de persona es decir un array donde cada elemento del array es
 		 * de un tipo persona*/
 		
-		Persona persona1 = null;
-		Persona persona2 = null;
-		Persona persona3 = null;
-		Persona persona4 = null;
-		Persona persona5 = null;
+
 		
-		persona1 = Persona.builder()
+		Persona[] personas = {
+				
+				Persona.builder()
 				.nombre("Jorge")
 				.primerApellido("Pascual")
 				.segundoApellido("Ramirez")
 				.genero(Genero.HOMBRE)
 				.fechaNacimiento(LocalDate.of(1995, Month.JANUARY, 10))
 				.salario(3500.50)
-				.build();
-		
-		persona2 = Persona.builder()
+				.build(),
+				
+				Persona.builder()
 				.nombre("Sebastian")
 				.primerApellido("Sanjuanelo")
 				.segundoApellido("Arrieta")
 				.genero(Genero.HOMBRE)
 				.fechaNacimiento(LocalDate.of(2000, Month.DECEMBER, 1))
 				.salario(2450.70)
-				.build();
-		
-		persona3 = Persona.builder()
+				.build(),
+				
+				Persona.builder()
 				.nombre("Alex Eduardo")
 				.primerApellido("Pilicita")
 				.segundoApellido("Changoluisa")
 				.genero(Genero.HOMBRE)
 				.fechaNacimiento(LocalDate.of(1997, Month.SEPTEMBER, 11))
 				.salario(4800.46)
-				.build();
-		
-		persona4 = Persona.builder()
+				.build(),
+				
+				Persona.builder()
 				.nombre("Javier")
 				.primerApellido("Jurado")
 				.segundoApellido("Moran")
 				.genero(Genero.HOMBRE)
 				.fechaNacimiento(LocalDate.of(2005, Month.OCTOBER, 25))
 				.salario(4500.50)
-				.build();
-		
-		persona5 = Persona.builder()
+				.build(),
+				
+				Persona.builder()
 				.nombre("Rodrigo")
 				.primerApellido("Rivero")
 				.segundoApellido("Fernandez")
 				.genero(Genero.HOMBRE)
 				.fechaNacimiento(LocalDate.of(1992, Month.NOVEMBER, 4))
 				.salario(3760.40)
-				.build();
-		
-		Persona[] personas = {
-				persona1,
-				persona2,
-				persona3,
-				persona4,
-				persona5
+				.build()
 				
 		};
 
