@@ -150,7 +150,24 @@ public class App {
 			numerosEnteros[i] = i + 1;
 
 		}
+		// mostrar los elementos del array original. y aqui vamos a utizar una SENTENCIA FOR MEJORADA
+		
+		System.out.println("------------ Array original ---------------");
+		
+		for ( int numeroEntero : numerosEnteros)
+			System.out.println(numeroEntero);
 
+		/*Utilizando una sentencia for clasica recorrer el arrray numerosEnteros y mostrar solamente los que sean pares*/
+		
+		System.out.println("--------- Elementos que son par del array original -----------");
+		
+		 for (int i = 0; i <= TOTAL_ELEMENTOS - 1; i++) {
+			 if (numerosEnteros[i] % 2 == 0) {
+				 // si entramos en este bloque (llave de apertura y llave de cierre )
+				 // quiere decir que el elemento del array numerosEnteros es par
+				 System.out.println(numerosEnteros[i]);
+			 }
+		 }
+		 
 	}
 }
-// este comentario forma parte del ejercicio del 14 de abril
