@@ -2,6 +2,7 @@
 
 package com.example;
 
+
 import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
@@ -9,10 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
-@SuperBuilder
+
 public class Persona  {
 
 	/*
@@ -34,20 +32,9 @@ public class Persona  {
 	private Genero genero;
 	private LocalDate fechaNacimiento;
 	private Double salario;
+
+	/*A continucion las variables mienbros de la clase, que se le llama:
+	 * propiadades, campos y atributos  */
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	}
+	private String email;
+}
