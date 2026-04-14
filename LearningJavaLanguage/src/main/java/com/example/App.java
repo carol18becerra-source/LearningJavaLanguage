@@ -2,8 +2,11 @@ package com.example;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Iterator;
 
 public class App {
+
+	static final int TOTAL_ELEMENTOS = 100;
 
 	public static void main(String[] args) {
 
@@ -49,10 +52,10 @@ public class App {
 		 * numeros es un array de tamaño fijo puedo modificar sus elementos pero no
 		 * agregar ni eliminar ningundo
 		 */
-		
+
 		// modificar el primer elemento del array
 		numeros[0] = 100;
-		
+
 		System.out.println(numeros[0]);
 
 		/*
@@ -63,62 +66,90 @@ public class App {
 		int[] numeros2 = new int[10];
 		System.out.println("El array numeros2 tiene: " + numeros2.length + " elementos");
 		System.out.println("El primer elemento del array numeros2 es: " + numeros2[0]);
-		
-		/*creando un array de persona es decir un array donde cada elemento del array es
-		 * de un tipo persona*/
-		
 
-		
+		/*
+		 * creando un array de persona es decir un array donde cada elemento del array
+		 * es de un tipo persona
+		 */
+
 		Persona[] personas = {
-				
-				Persona.builder()
-				.nombre("Jorge")
-				.primerApellido("Pascual")
-				.segundoApellido("Ramirez")
-				.genero(Genero.HOMBRE)
-				.fechaNacimiento(LocalDate.of(1995, Month.JANUARY, 10))
-				.salario(3500.50)
-				.build(),
-				
-				Persona.builder()
-				.nombre("Sebastian")
-				.primerApellido("Sanjuanelo")
-				.segundoApellido("Arrieta")
-				.genero(Genero.HOMBRE)
-				.fechaNacimiento(LocalDate.of(2000, Month.DECEMBER, 1))
-				.salario(2450.70)
-				.build(),
-				
-				Persona.builder()
-				.nombre("Alex Eduardo")
-				.primerApellido("Pilicita")
-				.segundoApellido("Changoluisa")
-				.genero(Genero.HOMBRE)
-				.fechaNacimiento(LocalDate.of(1997, Month.SEPTEMBER, 11))
-				.salario(4800.46)
-				.build(),
-				
-				Persona.builder()
-				.nombre("Javier")
-				.primerApellido("Jurado")
-				.segundoApellido("Moran")
-				.genero(Genero.HOMBRE)
-				.fechaNacimiento(LocalDate.of(2005, Month.OCTOBER, 25))
-				.salario(4500.50)
-				.build(),
-				
-				Persona.builder()
-				.nombre("Rodrigo")
-				.primerApellido("Rivero")
-				.segundoApellido("Fernandez")
-				.genero(Genero.HOMBRE)
-				.fechaNacimiento(LocalDate.of(1992, Month.NOVEMBER, 4))
-				.salario(3760.40)
-				.build()
-				
+
+				Persona.builder().nombre("Jorge").primerApellido("Pascual").segundoApellido("Ramirez")
+						.genero(Genero.HOMBRE).fechaNacimiento(LocalDate.of(1995, Month.JANUARY, 10)).salario(3500.50)
+						.build(),
+
+				Persona.builder().nombre("Sebastian").primerApellido("Sanjuanelo").segundoApellido("Arrieta")
+						.genero(Genero.HOMBRE).fechaNacimiento(LocalDate.of(2000, Month.DECEMBER, 1)).salario(2450.70)
+						.build(),
+
+				Persona.builder().nombre("Alex Eduardo").primerApellido("Pilicita").segundoApellido("Changoluisa")
+						.genero(Genero.HOMBRE).fechaNacimiento(LocalDate.of(1997, Month.SEPTEMBER, 11)).salario(4800.46)
+						.build(),
+
+				Persona.builder().nombre("Javier").primerApellido("Jurado").segundoApellido("Moran")
+						.genero(Genero.HOMBRE).fechaNacimiento(LocalDate.of(2005, Month.OCTOBER, 25)).salario(4500.50)
+						.build(),
+
+				Persona.builder().nombre("Rodrigo").primerApellido("Rivero").segundoApellido("Fernandez")
+						.genero(Genero.HOMBRE).fechaNacimiento(LocalDate.of(1992, Month.NOVEMBER, 4)).salario(3760.40)
+						.build()
+
 		};
 
-		
+		/* OPERADORES */
+
+		/*
+		 * Opereradores aritmeticos que son: +, -, *, /, %
+		 * 
+		 * de los anteriores operadores vamos a ejemplificar a continuacion el operador
+		 * % (utilizado entre otras cosas para saber si un numero es par o no)
+		 * 
+		 * vamos a implementar una sentencia de control de flujo que no existe en SQL
+		 * que es la sentencia for que se utiliza para recorrer los elementos del erray
+		 * 
+		 * primero utilizaremos la sentecia for clasica y posteriormente la sentencia
+		 * for mejorado (mal llamado for each)
+		 */
+
+		/*
+		 * el ejemplo concretamente seria:
+		 * 
+		 * 1- declarar un array de 100 elementos 2- agregarle valores al array 3-
+		 * recorrer el array y solamente mostar los elementos que sea pares.
+		 */
+
+		// declaracion del array de 100 elementos
+
+		int[] numerosEnteros = new int[TOTAL_ELEMENTOS];
+
+		/*
+		 * recorrer el array numerosEnteros y asignar a cada elemento un calor entre 1 y
+		 * 100.
+		 * 
+		 * for (int i = 0; i <= TOTAL_ELEMENTOS - 1; i = i + 1) {
+		 * 
+		 * //numerosEnteros[i] = i + 1;
+		 * 
+		 * } NOTA IMPORTANTE cuando el operador de auto incremento (++) o tambien auto
+		 * decremento (--) esta solo en una sentencia da lo mismo que vaya delante de la
+		 * variable o detras es decir ++i; es lo mismo que i++;
+		 * 
+		 * pero cuando el operador de auto incremento o auto decremento esta en un
+		 * expresion aqui si importa el orden por ejemplo
+		 * 
+		 * ++i * 25; primero incrementa el valor de la i y luego lo multiplica por 25
+		 * i-- * 25; primero decrementa el valor de la i y luego lo multiplica por 25
+		 */
+
+		/*
+		 * la expresion i = i + 1 da lugar al operador de auto incremento que seria i++
+		 */
+
+		for (int i = 0; i <= TOTAL_ELEMENTOS - 1; i++) {
+
+			numerosEnteros[i] = i + 1;
+
+		}
+
 	}
 }
-

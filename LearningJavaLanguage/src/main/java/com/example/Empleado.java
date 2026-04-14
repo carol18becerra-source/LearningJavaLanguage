@@ -17,7 +17,6 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-@Data
 @SuperBuilder
 @EqualsAndHashCode(callSuper = false)
 public class Empleado extends Persona{
