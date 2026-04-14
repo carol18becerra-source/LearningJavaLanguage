@@ -169,6 +169,29 @@ public class App {
 			 }
 		 }
 		 
+		 /*Ejercicio # 3.
+
+			1-Comitear los cambios actuales del proyecto Learning Java Language, poner como comentario, por ejemplo, 
+			“antes de realizar el ejercicio 3” 
+			2-Utilizar un bucle for mejorado para mostrar los elementos 
+			que son impares del array numeros Enteros y contar la cantidad de números impares encontrados*/
+		 
+		  System.out.println("--------------- EJERCICIO # 3 ----------------");
+			 
+			 int contadorImpares = 0;
+			 
+			 
+			  System.out.println("--------------- Numeros impares ----------------");
+			 for (int numero : numerosEnteros) {
+		            if (numero % 2 != 0) {
+		                System.out.println(numero);
+		                contadorImpares++;
+		            }
+		        }
+
+			  	System.out.println("-------------------------------");
+
+		        System.out.println("Cantidad total de impares: " + contadorImpares); 
 		
 		 
 	}
