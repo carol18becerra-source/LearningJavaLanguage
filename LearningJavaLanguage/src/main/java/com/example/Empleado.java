@@ -24,9 +24,10 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder // Fundamental para que funcione junto con Persona
 public class Empleado extends Persona {
 
-    
+    private double salario;
     private Dpto dpto;
     private LocalDate fechaAlta;
+    // numero de la seguridad social
     private String ssn;
 }
 	
