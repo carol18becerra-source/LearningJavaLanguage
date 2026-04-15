@@ -5,21 +5,20 @@ import java.time.Month;
 
 public class App {
 	
-	static void printObject(Object object) {
+	static String printObject(Object object) {
 		/*Recibo  como parametro un object y en dependencia del tipo imprimira el salario si se trata de un 
 		 * empleado o el total de asignaturas si se tratase de un estudiante
 		 */
 		
 		if (object instanceof Empleado) {
 			Empleado empleado = (Empleado) object;
-			
-			System.out.println("Salario del empleado: " + empleado.getSalario());
+			return "Salario del empleado: " + empleado.getSalario();
 		}else if (object instanceof Estudiante) {
 			
 			Estudiante estudiante = (Estudiante) object;
-			System.out.println("Total de asignaturas del estudiante: " + estudiante.getTotalAsignaturas());
+			return "Total de asignaturas del estudiante: " + estudiante.getTotalAsignaturas();
 		}else {
-			System.out.println("No es ni empleado ni estudiante");
+			return "No es ni empleado ni estudiante";
 		}
 	};
 	
@@ -84,9 +83,18 @@ public class App {
 		
 		/*Invocar o llamar el metodo printObject*/
 		
-		printObject(p1);
-		printObject(e1);
-		printObject(emp1);
+		String resultado = null;
+		
+		
+	  resultado = printObject(p1);
+	  System.out.println(resultado);
+	  
+	  resultado = printObject(e1);
+	  System.out.println(resultado);
+	  
+	  resultado = printObject(emp1);
+	  System.out.println(resultado);
+
 	
 	}
 }
