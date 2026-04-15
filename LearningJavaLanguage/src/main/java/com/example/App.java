@@ -5,17 +5,21 @@ import java.time.Month;
 
 public class App {
 	
-	static String printObject(Object object) {
+	static String printObject(Object obj) {
 		/*Recibo  como parametro un object y en dependencia del tipo imprimira el salario si se trata de un 
 		 * empleado o el total de asignaturas si se tratase de un estudiante
 		 */
 		
-		if (object instanceof Empleado) {
-			Empleado empleado = (Empleado) object;
-			return "Salario del empleado: " + empleado.getSalario();
-		}else if (object instanceof Estudiante) {
+		/*utilizando los venificion de Pattern Matching*/
+		
+		if (obj instanceof Empleado empleado) {
 			
-			Estudiante estudiante = (Estudiante) object;
+			//Empleado empleado = (Empleado) object;
+			
+			return "Salario del empleado: " + empleado.getSalario();
+		}else if (obj instanceof Estudiante estudiante) {
+			
+			//Estudiante estudiante = (Estudiante) obj;
 			return "Total de asignaturas del estudiante: " + estudiante.getTotalAsignaturas();
 		}else {
 			return "No es ni empleado ni estudiante";
