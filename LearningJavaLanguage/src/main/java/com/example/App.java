@@ -193,6 +193,33 @@ public class App {
 
 		        System.out.println("Cantidad total de impares: " + contadorImpares); 
 		
+		        /*SENTENCIA DE ASIGNACION COMPUESTA */
+		        
+		        byte a = 10;
+		        short b = 10;
+		        
+		        /*La expresion siguiente al evaluarse se promueve al tipo de dato int primitivo 
+		         * los valores de las variables a y b, dando como resultado un valor de tipo
+		         * int que no se puede almacenar en un tipo short, por lo cual hay que realizar un 
+		         * type casting (en castellano simplemente casteo) ¿Que es un casteo o 
+		         * type casting? es simplemente forzar el tipo de un resultado al tipo de datos
+		         * que queremos y se escribe entre parentesis*/
+		        
+		        //b = a + b;
+		        
+		        // la expresion anterior genera un error en tiempo de compilacion es decir que 
+		        // no hay que ejecutar el programa para que ya te informe el error
 		 
+		        b = (short) (a + b);
+		        
+		        System.out.println("Resultado casteado explicitamente: " + b);
+		        
+		        /*El casteo type casting debe ser evitado en la medida de lo posible, asi que la 
+		         * situacion anterior se soluciona mediante una sentencia de asignacion compuesta*/
+		        
+		        b += a;
+		        System.out.println("El valor de b sera: " + b);
+		        
+		        
 	}
 }
