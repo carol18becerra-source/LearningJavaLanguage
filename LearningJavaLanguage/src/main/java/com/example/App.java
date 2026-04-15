@@ -85,16 +85,10 @@ public class App {
 		
 		String resultado = null;
 		
-		
-	  resultado = printObject(p1);
-	  System.out.println(resultado);
-	  
-	  resultado = printObject(e1);
-	  System.out.println(resultado);
-	  
-	  resultado = printObject(emp1);
-	  System.out.println(resultado);
-
+		System.out.println("El resultado es: " + printObject(p1));
+		System.out.println(printObject(e1));
+		System.out.println(printObject(emp1));
+	 
 	
 	}
 }
